@@ -1,4 +1,7 @@
 # Quando Lança API
+- [Rota /games](#rotagames)
+  - [Recuperar Todos os Jogos do Banco de Dados](#jogos)
+  - [Recuperar Jogo pelo ID ou NOME](#encontrarjogo)
 - [Rota /users](#rotausers)
   - [Registrar um novo usuário](#registrarusuario)
   - [Fazer login](#fazerlogin)
@@ -6,7 +9,61 @@
   - [Recuperar Jogos Favoritados Pelo Usuário](#favoritos)
   - [Adicionar Jogo aos Favoritos](#adicionarfavoritos)
   - [Remover Jogo dos Favoritos](#removerfavoritos)
- 
+
+
+## Rota /games
+<a name="#rotagames"></a>
+## Recuperar Todos os Jogos do Banco de Dados
+<a name="#registrarusuario"></a>
+- **Rota**: `/games`
+- **Método**: `GET`
+- **Descrição**: Retorna todos os jogos anunciados do banco de dados.
+- **Opções (opcional)**:
+</p>minified retona apenas name, release e lançamento dos jogos</p>
+</p>page faz a paginação dos dados, retornando 10 jogos por página</p>
+
+  ```json
+      {
+        "minified": true,
+        "page": 1
+      }
+  ```
+- **Exemplo de Resposta**:
+  </br>
+  **status**: `200`
+  </br></br>
+  ```json
+        [
+        	{
+        		"id": "6662d74b-48ce-4c59-aa1e-726f16f1086b",
+        		"name": "Omega 6 The Video Game",
+        		"release": "To Be Announced",
+        		"developer": "Happymeal",
+        		"image": "https://assets-prd.ignimgs.com/2023/09/20/omega6-1695252158706.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"background": "https://assets-prd.ignimgs.com/2023/09/20/omega6-1695252158706.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"platforms": [
+        			"PC",
+        			"Nintendo Switch"
+        		],
+        		"lançamento": "To Be Announced"
+        	},
+        	{
+        		"id": "e6b2eceb-b3a5-448f-a7b6-af1dfcc80c1e",
+        		"name": "Star Stuff",
+        		"release": "2024-06-07T03:00:00.000Z",
+        		"developer": "Ánimo Games Studio",
+        		"image": "https://assets-prd.ignimgs.com/2023/06/14/starstuff-1686771593202.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"background": "https://assets-prd.ignimgs.com/2023/06/14/starstuff-1686771593202.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"platforms": [
+        			"PC"
+        		],
+        		"lançamento": "Lançado há 12 dias."
+        	},
+          ...
+        ]
+    ```
+
+
 
 ## Rota /users
 <a name="#rotausers"></a>
