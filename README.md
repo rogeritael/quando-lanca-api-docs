@@ -1,6 +1,6 @@
 # Quando Lança API
 - [Rota /games](#rotagames)
-  - [Recuperar Todos os Jogos do Banco de Dados](#jogos)
+  - [Recuperar Todos os Jogos do Banco de Dados](#todososjogos)
   - [Recuperar Jogo pelo ID ou NOME](#encontrarjogo)
 - [Rota /users](#rotausers)
   - [Registrar um novo usuário](#registrarusuario)
@@ -14,11 +14,11 @@
 ## Rota /games
 <a name="#rotagames"></a>
 ## Recuperar Todos os Jogos do Banco de Dados
-<a name="#registrarusuario"></a>
+<a name="#todososjogos"></a>
 - **Rota**: `/games`
 - **Método**: `GET`
 - **Descrição**: Retorna todos os jogos anunciados do banco de dados.
-- **Opções (opcional)**:
+- **Corpo da Requisição (opcional)**:
 </p>minified retona apenas name, release e lançamento dos jogos</p>
 </p>page faz a paginação dos dados, retornando 10 jogos por página</p>
 
@@ -60,6 +60,38 @@
         		"lançamento": "Lançado há 12 dias."
         	},
           ...
+        ]
+    ```
+
+## Recuperar Jogo pelo ID ou NOME
+<a name="#encontrarjogo"></a>
+- **Rota**: `/games/:term` separado por traço no caso de pesquisa por nome, ex: resident-evil-5-remake
+- **Método**: `GET`
+- **Descrição**: Retorna jogo pelo Id ou pelo nome.
+- **Exemplos**:
+  ```json
+        http://localhost:5000/games/0547c392-9a2b-4b99-8622-7548934274d3
+
+        http://localhost:5000/games/age-of-empires-mobile
+  ```
+- **Exemplo de Resposta**:
+  </br>
+  **status**: `200`
+  </br></br>
+  ```json
+        [
+        	{
+        		"id": "0547c392-9a2b-4b99-8622-7548934274d3",
+        		"name": "Age of Empires Mobile",
+        		"release": "To Be Announced",
+        		"developer": "World's Edge",
+        		"image": "https://assets-prd.ignimgs.com/2022/10/25/age-of-empires-mobile-button-1-1666724649769.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"background": "https://assets-prd.ignimgs.com/2022/10/25/age-of-empires-mobile-button-1-1666724649769.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
+        		"platforms": [
+        			"Android",
+        			"iPhone"
+        		]
+        	}
         ]
     ```
 
