@@ -114,11 +114,27 @@
         }
   ```
 
-
-
-
-
-
-
-
-  - [Remover Jogo dos Favoritos](#removerfavoritos)
+## Remover Jogo dos Favoritos
+<a name="#removerfavoritos"></a>
+- **Rota**: `/wishlist/remove`
+- **Método**: `DELETE`
+- **Descrição**: Remove um jogo da lista de favoritos do usuário.
+- **Corpo da Requisição**:
+  </br></br>
+    ```json
+        {
+        	"gameId": "898c211e-3c03-4e7a-a881-74f0922fb57d"
+        }
+    ```
+    ```txt
+        Authorization: {{Token de Usuário}}
+    ```
+- **Exemplo de Resposta**:
+  </br>
+  **status**: `200`
+  </br></br>
+  ```json
+        {
+        	"message": "Jogo removido da wishlist"
+        }
+  ```
