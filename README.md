@@ -89,6 +89,30 @@
         ]
     ```
 
+## Adicionar Jogo aos Favoritos
+<a name="#adicionarfavoritos"></a>
+- **Rota**: `/wishlist/add`
+- **Método**: `POST`
+- **Descrição**: Adiciona um jogo à lista de favoritos do usuário.
+- **Corpo da Requisição**:
+  </br></br>
+    ```json
+        {
+        	"gameId": "898c211e-3c03-4e7a-a881-74f0922fb57d"
+        }
+    ```
+    ```txt
+        Authorization: {{Token de Usuário}}
+    ```
+- **Exemplo de Resposta**:
+  </br>
+  **status**: `200`
+  </br></br>
+  ```json
+        {
+        	"message": "jogo adicionado à lista de desejos com sucesso"
+        }
+  ```
 
 
 
@@ -97,6 +121,4 @@
 
 
 
-
-  - [Adicionar Jogo aos Favoritos](#adicionarfavoritos)
   - [Remover Jogo dos Favoritos](#removerfavoritos)
