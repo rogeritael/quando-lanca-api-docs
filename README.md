@@ -1,4 +1,11 @@
 # Quando Lança API
+## Link da API
+[https://quando-lanca-api.onrender.com/](https://quando-lanca-api.onrender.com/)
+
+## Tecnologias Utilizadas
+Node, Express, TypeScript, Postgres, Supabase, Arquitetura MVC, API REST
+
+## Sumário
 - [Rota /games](#rotagames)
   - [Recuperar Todos os Jogos do Banco de Dados](#todososjogos)
   - [Recuperar Jogo pelo ID ou NOME](#encontrarjogo)
